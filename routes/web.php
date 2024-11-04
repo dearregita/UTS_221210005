@@ -16,3 +16,15 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// POST - Create
+$router->post('/data-barang', 'DataBarangController@store');
+
+// GET - Read
+$router->get('/data-barang', 'DataBarangController@index');
+
+// PUT - Update
+$router->put('/data-barang/{IdBarang}', 'DataBarangController@update');
+
+// DELETE - Delete
+$router->delete('/data-barang/{IdBarang}', 'DataBarangController@destroy');
